@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/rubik"
+    tools:context=".visuals.GameCharacter">
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/primary_rounded_gray">
+        <!--Use relative layout for images, so that hat overlap over the head of character-->
+        <TextView
+            android:id="@+id/accolade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:background="@color/gray"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:text="Beginner"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/smily" />
+
+            <ImageView
+                android:id="@+id/equipped_hat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@drawable/primary_rounded_gray"
+        android:layout_width="300dp"
+        android:layout_height="50dp">
+        <Spinner
+            android:id="@+id/accoladeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:spinnerMode="dropdown"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mini_hats_layout"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/primary_rounded_gray">
+        <!--Alpha 0.5 shows that this hat is not earned yet,
+        we set the alpha programmatically if user earned it-->
+        <ImageView
+            android:alpha="0.5"
+            android:id="@+id/hat_add"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/brown_hat"/>
+        <ImageView
+            android:alpha="0.5"
+            android:id="@+id/hat_sub"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/green_hat"/>
+        <ImageView
+            android:alpha="0.5"
+            android:id="@+id/hat_mul"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/blue_hat"/>
+        <ImageView
+            android:alpha="0.5"
+            android:id="@+id/hat_div"
+            android:layout_width="80dp"
+            android:layout_height="70dp"
+            android:src="@drawable/red_hat"/>
+    </LinearLayout>
+
+</LinearLayout>

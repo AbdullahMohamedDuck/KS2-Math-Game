@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/gameboard_bg"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+        <!--Styles such as primaryText, primaryContainer
+    are declared in values/styles.xml-->
+        <TextView
+            android:id="@+id/level_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="5dp"
+            android:textSize="30sp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/primary_rounded_gray"
+            android:text="Level 1"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="20dp">
+
+            <!--left side layout for lives and correct count-->
+            <LinearLayout
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!--horizontal array of hearts-->
+                <LinearLayout
+                    android:id="@+id/hearts_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/primary_rounded_gray">
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/heart"/>
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/heart"/>
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:padding="5dp"
+                        android:src="@drawable/heart"/>
+                </LinearLayout>
+                <!--End of horizontal array of hearts-->
+                <TextView
+                    android:id="@+id/ansCount_text"
+                    style="@style/gameboardText"
+                    android:background="@drawable/primary_rounded_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Correct Answer: 0"
+                    android:textSize="18sp" />
+            </LinearLayout>
+            <!--End of left side layout for lives and correct count-->
+
+
+            <!--Right side timer layout-->
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentEnd="true">
+                <TextView
+                    style="@style/gameboardText"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/primary_rounded_gray"
+                    android:textSize="32sp"
+                    android:padding="10dp"
+                    android:text="🕑"/>
+                <TextView
+                    android:id="@+id/timer_text"
+                    style="@style/gameboardText"
+                    android:background="@drawable/primary_rounded_gray"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="60 seconds"
+                    android:textSize="18sp" />
+            </LinearLayout> <!--Right side timer layout ends-->
+        </RelativeLayout>
+
+        <!--Question text view-->
+        <TextView
+            android:id="@+id/question_text"
+            style="@style/gameboardText"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="30sp"
+            android:layout_margin="20dp"
+            android:background="@drawable/primary_rounded_gray"
+            android:text="Question 1 : \nWhat is 8+6? "/>
+
+        <!--2X2 Grid for options-->
+        <GridLayout
+            android:id="@+id/options_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rowCount="2"
+            android:columnCount="2">
+            <TextView
+                style="@style/optionsText"
+                android:background="@color/gray"
+                android:text="12" />
+            <TextView
+                style="@style/optionsText"
+                android:background="@color/gray"
+                android:text="18" />
+            <TextView
+                style="@style/optionsText"
+                android:background="@color/gray"
+                android:text="21" />
+            <TextView
+                style="@style/optionsText"
+                android:background="@color/gray"
+                android:text="10" />
+        </GridLayout> <!--2X2 Grid for options Ends-->
+    </LinearLayout>
+
+    <!--A layout to show messages about game
+    this layout is temporarily invisible,
+    we show it with java, when we need to show some message to user-->
+    <LinearLayout
+        android:id="@+id/msg_box"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/message_box"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/msg_text"
+            style="@style/optionsText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting for Msg" />
+
+        <ImageView
+            android:id="@+id/msg_img"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <Button
+            style="@style/primaryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ok" />
+    </LinearLayout>
+
+</RelativeLayout>

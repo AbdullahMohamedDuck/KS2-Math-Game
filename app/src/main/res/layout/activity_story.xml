@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/rubik"
+    android:orientation="vertical"
+    tools:context=".visuals.Story">
+
+    <!--Styles such as primaryText, primaryContainer
+    are declared in values/styles.xml-->
+    <LinearLayout
+        style="@style/primaryContainer"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:background="@drawable/primary_rounded_gray">
+        <TextView
+            android:id="@+id/topic_label"
+            style="@style/primaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Addition"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/primaryContainer"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:background="@drawable/primary_rounded_gray">
+        <TextView
+            style="@style/primaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Stage"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/level_layout"
+        style="@style/primaryContainer"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/primary_rounded_gray">
+        <Button
+            style="@style/primaryButton"
+            android:text="Level 1" />
+        <Button
+            style="@style/primaryButton"
+            android:text="Level 2 🔒" />
+        <Button
+            style="@style/primaryButton"
+            android:text="Level 3 🔒" />
+        <Button
+            style="@style/primaryButton"
+            android:text="Level 4 🔒" />
+        <Button
+            style="@style/primaryButton"
+            android:text="Level 5 🔒" />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@drawable/rubik"
+    android:orientation="vertical"
+    tools:context=".TopicSelector">
+
+    <!--Styles such as primaryText, primaryContainer
+    are declared in values/styles.xml-->
+    <LinearLayout
+        style="@style/primaryContainer"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:background="@drawable/primary_rounded_gray">
+        <TextView
+            style="@style/primaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="KS2 Math Game"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/primaryContainer"
+        android:layout_marginTop="100dp"
+        android:orientation="vertical"
+        android:background="@drawable/primary_rounded_gray">
+        <TextView
+            android:id="@+id/mode_label"
+            style="@style/primaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Story Mode"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_layout"
+        style="@style/primaryContainer"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/primary_rounded_gray">
+        <Button
+            android:onClick="addition_click"
+            style="@style/primaryButton"
+            android:text="Addition" />
+        <Button
+            android:onClick="subtraction_click"
+            style="@style/primaryButton"
+            android:text="Subtraction" />
+        <Button
+            android:onClick="multiplication_click"
+            style="@style/primaryButton"
+            android:text="Multiplication" />
+        <Button
+            android:onClick="division_click"
+            style="@style/primaryButton"
+            android:text="Division" />
+    </LinearLayout>
+
+</LinearLayout>

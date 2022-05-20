@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1027045263173",
+    "firebase_url": "https://cst3990-b021f-default-rtdb.firebaseio.com",
+    "project_id": "cst3990-b021f",
+    "storage_bucket": "cst3990-b021f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027045263173:android:f80994a4e47e8e51b7202c",
+        "android_client_info": {
+          "package_name": "com.game.ks2mathgame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1027045263173-bor97c5b0562ftq17n2ree9qv5463ru6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.game.ks2mathgame",
+            "certificate_hash": "4b500d783ff0c1fcba7b0ca049aa0a4485f43475"
+          }
+        },
+        {
+          "client_id": "1027045263173-q4d5dh70qanrg5fv1kr2o9eqtkn99862.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDURtb51QuFKdZWwovtk7uRC6ZSRGFVR5c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1027045263173-q4d5dh70qanrg5fv1kr2o9eqtkn99862.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">KS2 Math Game</string>
+    <!--terms and conditions-->
+    <string name="tac">
+        <b><u>terms and conditions</u></b>
+    </string>
+
+    <string name="signin">
+        <b><u>sign in</u></b>
+    </string>
+
+    <string name="signout">
+        <b><u>sign out</u></b>
+    </string>
+
+    <string name="signup">
+        <b><u>sign up</u></b>
+    </string>
+</resources>

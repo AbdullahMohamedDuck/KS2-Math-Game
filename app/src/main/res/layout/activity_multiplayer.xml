@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:gravity="center_horizontal"
+    android:background="@drawable/gameboard_bg"
+    tools:context=".visuals.Multiplayer">
+
+    <LinearLayout
+        style="@style/primaryContainer"
+        android:layout_margin="50dp"
+        android:orientation="vertical"
+        android:background="@drawable/primary_rounded_gray">
+        <TextView
+            style="@style/primaryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Multiplayer"/>
+    </LinearLayout>
+
+    <EditText
+        android:padding="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/primary_rounded_gray"
+        android:id="@+id/email_input"
+        android:inputType="textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Player ID"/>
+
+    <!--wait progress is visible only if the user has challenged the
+    player and wait till that player joins-->
+    <LinearLayout
+        android:id="@+id/progress_view"
+        android:visibility="gone"
+        android:background="@drawable/primary_rounded_gray"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="waiting for player to join"/>
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/progressBar"
+            android:progressDrawable="@drawable/round_progress_bar" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/challenge_player_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:text="Challenge ID" />
+
+    <Button
+        android:id="@+id/random_challenge_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:text="Challenge Random" />
+
+
+</LinearLayout>
